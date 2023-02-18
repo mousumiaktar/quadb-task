@@ -1,16 +1,13 @@
 import React from 'react';
 
 const Items = ({item}) => {
-    const {image,name,language,rating,genres,premiered} = item.show;
+    const {image,name,language} = item.show;
     return (
         <div>
-            <img src={image?.medium} alt="" />
-            <h4>{name}</h4>
-            <p>{language}</p>
-            <p>{rating.average}</p>
-            <p>{genres}</p>
-            <p>{premiered}</p>
-            <button>View More</button>
+            <img className='md:h-[250px] md:w-[150]' src={image?.medium} alt="" />
+            <h4 className='text-xl font-bold'>{name}</h4>
+            <p><span className='font-bold'>Language:</span> {language}</p>
+            <button className='bg-blue-500 text-white px-2 mt-2 rounded-sm hover:bg-blue-700 duration-150'>View More</button>
         </div>
     );
 };
