@@ -1,15 +1,15 @@
-import { useEffect, useState } from 'react';
+// import { useEffect, useState } from 'react';
 
-const useItems = () => {
-    const [items, setItems] = useState([]);
+// const useItems = () => {
+//     const [items, setItems] = useState([]);
 
-    useEffect(() => {
-        fetch('https://api.tvmaze.com/search/shows?q=all')
-            .then(res => res.json())
-            .then(data => setItems(data));
-    }, []);
+//     useEffect(() => {
+//         fetch('https://api.tvmaze.com/search/shows?q=all')
+//             .then(res => res.json())
+//             .then(data => setItems(data));
+//     }, []);
 
-    return [items, setItems];
-};
+//     return [items, setItems];
+// };
 
-export default useItems;
+// export default useItems;
